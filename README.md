@@ -84,5 +84,6 @@ function sendFile(res, path){
 
 ## 6. SCAN YOUR PROEJCT ANNOTATION
 
-![main_tab](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_tab.PNG)
+![maintab](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_tab.png)
+
 -------------------------------------------------------------------------------------
