@@ -96,7 +96,7 @@ function sendFile(res, path){
 - After selecting the URL in the left tab, you can set the Validation Rule for the request message.
 - These settings are reflected in real time without server reboot.
 
-![validation_setting](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/validation_setting.png)
+![validation_setting](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/validation_seting.png)
 
 -------------------------------------------------------------------------------------
 ## 8. EXCEL DOCU DOWNLOAD
