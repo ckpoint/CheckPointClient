@@ -86,4 +86,26 @@ function sendFile(res, path){
 
 ![maintab](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_tab.png)
 
+- With the B button you can scan the annotations into the project and load the message structure as shown below.
+
+
+![annotationscan](https://github.com/ckpoint/CheckPointClient/blob/master/res/annotation_scan.png)
+
+## 7. VALIDATION SETTING
+
+- After selecting the URL in the left tab, you can set the Validation Rule for the request message.
+- These settings are reflected in real time without server reboot.
+
+![validation_setting](https://github.com/ckpoint/CheckPointClient/blob/master/res/validation_setting.png)
+
 -------------------------------------------------------------------------------------
+## 8. EXCEL DOCU DOWNLOAD
+
+- If you open the main menu tab, you can see the Excel download button, and if the APACHE POI Library is included in the project, you can get the API structure as a document.
+
+![main_menu_open](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_menu_open.png)
+
+- EXCEL
+
+![excel_download](https://github.com/ckpoint/CheckPointClient/blob/master/res/excel_download.png)
+
