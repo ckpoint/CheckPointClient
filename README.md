@@ -76,7 +76,7 @@ function sendFile(res, path){
 ## 5. LOGIN AND SCAN
 - When you connect to the client, you will see the login page shown below.
 
-![login](https://github.com/ckpoint/CheckPointClient/blob/master/res/login.PNG)
+![login](https://github.com/ckpoint/CheckPointClient/blob/master/res/login.png)
 
 - Server URL : Your Spring boot Proejct Server URL
 - Password : Your Spring boot Proejct ckpoint.password default value is taeon
