@@ -6,6 +6,13 @@
 
 # Installation
 
+## Table of Contents
+- [ 1. Node Setup ](#node-setup)
+- [ 2. Download Client ](#download-client)
+- [ 3. Server Config ](#server-config)
+- [ 4. Server Start ](#server-start)
+
+
 ## 1. NODE SETUP
 
 Install node.js for each os in the link below.
@@ -73,7 +80,17 @@ function sendFile(res, path){
 
 - Open your browser and connect to http: // localhost: {PORT} or http://yourhost:{PORT}
 
-## 5. LOGIN AND SCAN
+# Usage
+
+## Table of Contents
+- [ 1. Login And Scan ](#login-and-scan)
+- [ 2. Scan your Proejct Annotation ](#scan-your-proejct-annotation)
+- [ 3. Validation Setting ](#validation-setting)
+- [ 4. Excel Docu Download](#excel-docu-download)
+- [ 5. Setting Backup](#setting-backup)
+- [ 6. Setting Restore](#setting-restore)
+
+## 1. LOGIN AND SCAN
 - When you connect to the client, you will see the login page shown below.
 
 ![login](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/login.png)
@@ -82,7 +99,7 @@ function sendFile(res, path){
 - Password : Your Spring boot Proejct ckpoint.password default value is taeon
 
 
-## 6. SCAN YOUR PROEJCT ANNOTATION
+## 2. SCAN YOUR PROEJCT ANNOTATION
 
 ![maintab](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/main_tab.png)
 
@@ -91,7 +108,7 @@ function sendFile(res, path){
 
 ![annotationscan](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/annotation_scan.png)
 
-## 7. VALIDATION SETTING
+## 3. VALIDATION SETTING
 
 - After selecting the URL in the left tab, you can set the Validation Rule for the request message.
 - These settings are reflected in real time without server reboot.
@@ -99,7 +116,7 @@ function sendFile(res, path){
 ![validation_setting](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/validation_seting.png)
 
 -------------------------------------------------------------------------------------
-## 8. EXCEL DOCU DOWNLOAD
+## 4. EXCEL DOCU DOWNLOAD
 
 - If you open the main menu tab, you can see the Excel download button, and if the APACHE POI Library is included in the project, you can get the API structure as a document.
 
@@ -109,11 +126,11 @@ function sendFile(res, path){
 
 ![excel_download](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/excel_download.png)
 
-## 8. SETTING_BACKUP
+## 5. SETTING_BACKUP
 
 - You can download the current settings as a json file with the JSON EXPORT button.
 
-## 9. SETTING_RESTORE
+## 6. SETTING_RESTORE
 
 - The backed up json file can be overwritten with the current setting with the JSON IMPORT button.
 
