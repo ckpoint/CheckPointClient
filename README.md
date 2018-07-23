@@ -109,3 +109,11 @@ function sendFile(res, path){
 
 ![excel_download](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/excel_download.png)
 
+## 8. SETTING_BACKUP
+
+- You can download the current settings as a json file with the JSON EXPORT button.
+
+## 9. SETTING_RESTORE
+
+- The backed up json file can be overwritten with the current setting with the JSON IMPORT button.
+
