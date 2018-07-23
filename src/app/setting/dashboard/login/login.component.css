@@ -1,0 +1,7 @@
+
+div.login_wrapper {line-height:50px; margin-top: 10%}
+div.login_wrapper {align-content: center; align-items: center; text-align: center ; vertical-align:middle}
+h1 {font-size: 80px}
+input {width:250px; height:30px}
+
+button { overflow: hidden; }

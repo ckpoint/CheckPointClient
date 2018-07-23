@@ -1,0 +1,20 @@
+
+ <p-accordionTab  header={{urlMap.method}}>
+
+    <div *ngFor="let url of urlMap.urlList" >
+
+    <i *ngIf="url.favorite" class="pi pi-star"  (click)="selectFavorite(url)"> </i>
+    <i *ngIf="!url.favorite" class="pi pi-star-o" (click)="selectFavorite(url)"> </i>
+
+    {{getUrlMappingType(url)}}
+    <button *ngIf="!url.select" pButton class="ui-button-secondary" label={{url.url}} (click)="selectUrl(url)"></button> 
+    <button *ngIf="url.select && !url.urlMapping" pButton class="ui-button-success" label={{url.url}} (click)="selectUrl(url)"></button>
+    <button *ngIf="url.select && url.urlMapping" pButton class="ui-button-Info" label={{url.url}} (click)="selectUrl(url)"></button>
+    <i *ngIf="url.select" class="pi pi-trash" (click)="delete(url)"> </i>
+    <i *ngIf="url.select" class="pi pi-cloud-download" (click)="menuPopup(url)"> </i>
+
+    <br>
+    </div>
+</p-accordionTab>
+
+<app-download-menu [visible]="menuView" [reqUrl]="selectedUrl" (onHide)="menuView=false"></app-download-menu>

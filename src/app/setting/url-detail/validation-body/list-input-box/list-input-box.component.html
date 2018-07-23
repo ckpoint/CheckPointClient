@@ -1,0 +1,7 @@
+<div *ngFor="let obj of strs; let idx=index">
+    <input type="text" [(ngModel)]="strs[idx].value" (ngModelChange)="changed()" name="input_{idx}" pInputText>
+    <i class="pi pi-times" (click)="minus(strs[idx])"></i>
+    <div *ngIf="idx==(strs.length-1)">
+        <i class="pi pi-plus" (click)="plus()"></i>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+
+
+<p-dialog header="Scan" [(visible)]="visible" (onHide)="hide()" >
+
+  <div   style="text-align: center">
+  <i *ngIf="ing" class="pi pi-spin pi-spinner" style="font-size: 3em"></i> <br>
+  <label>MaxDeepLevel</label><input type="number" [(ngModel)]="maxDeepLevel" name="maxDeepLevel">
+    <button pButton  class="ui-button-secondary" label="SCAN" (click)="scan()"></button>
+  </div>
+  
+
+</p-dialog>

@@ -1,0 +1,5 @@
+
+<p-accordion>
+    <app-url-item *ngFor="let map of urlListMap" [urlMap]="map" (favoriteClick)="favoriteClick($event)" (urlChanged)="selectUrl($event)"></app-url-item>
+
+</p-accordion>

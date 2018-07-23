@@ -1,0 +1,9 @@
+
+<p-dialog *ngIf="reqUrl" header={{reqUrl.url}} [(visible)]="visible" (onHide)="hide()" >
+
+  <div style="text-align: center">
+        <button pButton  class="ui-button-secondary" label="Excel" (click)="downloadExcel()"></button>
+        <br>
+        <button pButton  class="ui-button-secondary" label="Json" (click)="downloadJson()"></button>
+  </div>
+</p-dialog>

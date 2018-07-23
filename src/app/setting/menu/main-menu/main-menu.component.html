@@ -1,0 +1,15 @@
+
+<p-dialog header={{getServerUrl()}} [(visible)]="visible" (onHide)="hide()" >
+
+  <div style="text-align: center">
+        <button pButton  style="background-color: rgb(176, 196, 233)" class="ui-button-secondary" label="Refresh" (click)="refreshClick()"></button>
+        <br> <br>
+        <button pButton  style="background-color: rgb(215, 176, 233)" class="ui-button-secondary" label="Excel Download" (click)="downloadExcel()"></button>
+        <br> <br>
+        <button pButton style="background-color: rgb(176, 233, 193)" class="ui-button-secondary" label="Json Export" (click)="downloadJson()"></button>
+        <button pButton style="background-color: rgb(213, 233, 176)" class="ui-button-secondary" label="Json Import" (click)="importJson()"></button>
+        <br> <br>
+        <button pButton style="background-color: rgb(179, 181, 185)" class="ui-button-secondary" label="Logout" (click)="selectLogout()"></button>
+  </div>
+<app-import-menu [visible]="importMenuView" (refresh)="refreshClick()" (onHide)="importMenuView=false"></app-import-menu>
+</p-dialog>

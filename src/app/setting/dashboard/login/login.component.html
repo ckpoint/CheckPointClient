@@ -1,0 +1,28 @@
+<div class="login_wrapper">
+    <h1>CheckPoint</h1>
+    <form>
+        <div>
+        </div>
+
+        <div>
+            <div *ngIf="!inputNewUrl">
+                <label> Server Url : </label>
+                <p-dropdown [options]="urlHistory"  class="form-control" [(ngModel)]="serverInfo.baseUrl" name="urlHistory"></p-dropdown>
+                <i class="pi pi-pencil" style="font-size: 2em" (click)="inputNewUrl=!inputNewUrl"></i>
+
+            </div>
+            <div *ngIf="inputNewUrl">
+                <label> Server Url : </label>
+                <input type="text" class="form-control" [(ngModel)]="serverInfo.baseUrl" name="loginId" placeholder="username" />
+                <i class="pi pi-bars" style="font-size: 2em" (click)="inputNewUrl=!inputNewUrl"></i>
+            </div>
+        </div>
+        <div>
+            <label> Password : </label>
+            <input type="password" class="form-control" [(ngModel)]="loginInfo.token" name="password" placeholder="password" />
+        </div>
+        <div>
+        </div>
+        <button pButton class="ui-button-secondary" label="LOGIN" (click)="login(false)"></button>
+    </form>
+</div>

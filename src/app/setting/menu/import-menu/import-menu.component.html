@@ -1,0 +1,9 @@
+
+<p-dialog header="Json Import" [(visible)]="visible" (onHide)="hide()" >
+
+  <div style="text-align: center">
+        <p-fileUpload name="settings" url={{getUploadUrl()}} multiple="false"
+        accept="application/json" auto="auto" (onUpload)="uploadCompleted()"></p-fileUpload>
+  </div>
+
+</p-dialog>

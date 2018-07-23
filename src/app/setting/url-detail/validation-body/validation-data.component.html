@@ -1,0 +1,80 @@
+
+
+<div *ngIf="treeList && treeList.length > 0 ">
+    <h3>@Validation{{paramType == 'BODY' ? 'Body' : 'Param'}} </h3>
+
+        <div *ngIf="hiddenTap">
+            <button pButton class="ui-button-secondary" *ngFor="let ht of hiddenTap" label={{ht}} (click)="updateHiddenTap(ht, false)"> </button>
+            <br>
+        </div>
+
+    <p-treeTable [value]="treeList">
+        <ng-template pTemplate="header">
+            <tr>
+                <th >Name </th>
+                <th *ngIf="!isHidden('Type')" style="width: 10%">Type
+                    <i class="pi pi-minus-circle" (click)="updateHiddenTap('Type', true)"></i>
+                </th>
+
+                <th *ngFor="let rule of titleRules; let idx=index" [hidden]="isHidden(rule.ruleName)"> {{rule.ruleName }}
+                    <i class="pi pi-minus-circle" (click)="updateHiddenTap(rule.ruleName, true)"></i>
+                </th>
+
+                <th style="width:2%"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+            <tr *ngIf="!rowData.del">
+                <td style="font-size: 80%">
+                    <p-treeTableToggler  [rowNode]="rowNode"></p-treeTableToggler>
+                    {{rowData.name}}
+
+                </td>
+                <td *ngIf="!isHidden('Type')" style="text-align: center">
+
+                    <div *ngIf="rowData.id || paramType != 'BODY'" style="font-size: 80%"> {{rowData.type}} </div>
+
+                     <p-dropdown [options]="selectTypes" [(ngModel)]="rowData.type" [style]="{'width':'100%'}" (onChange)="updateType(rowData, $event.value)" *ngIf="!rowData.id && paramType =='BODY'"></p-dropdown>
+                </td>
+                <td *ngFor="let rule of rowData.validationRules; let idx=index" style="text-align: center" [hidden]="isHidden(rule.ruleName)">
+
+                    <label style="font-size: 1px;color: gray" *ngIf="!rule.use">{{rule.ruleName}}</label>
+                    <div *ngIf="rule.parentDependency ">
+                        <input type="checkbox" (ngModelChange)="checkBoxChange(rowData, rule, $event)" [(ngModel)]="rule.use" name="{{rule.ruleName + rowData.id}}">
+                    </div>
+                    
+                    <div *ngIf="!rule.parentDependency && isViewInputBox(rowData, rule)" >
+
+                        <div *ngIf="rule.standardValueType == 'NONE'">
+                            <input type="checkbox" (ngModelChange)="checkBoxChange(rowData, rule, $event)" [(ngModel)]="rule.use" name="{{rule.ruleName + rowData.id}}">
+                        </div>
+
+                        <div *ngIf="rule.standardValueType == 'STRING'">
+                            <input type="checkbox" (ngModelChange)="checkBoxChange(rowData, rule, $event)" [(ngModel)]="rule.use" name="{{rule.ruleName + rowData.id}}">
+                            <input style="width: 80%" type="text" *ngIf="rule.use" [(ngModel)]="rule.standardValue" name="{{rule.ruleName+rowData.id}}">
+                        </div>
+                    
+                        <div *ngIf="rule.standardValueType == 'NUMBER'">
+                            <input type="checkbox" (ngModelChange)="checkBoxChange(rowData, rule, $event)" [(ngModel)]="rule.use" name="{{rule.ruleName + rowData.id}}">
+                            <input style="width: 80%" type="number" *ngIf="rule.use" [(ngModel)]="rule.standardValue" name="{{rule.ruleName+rowData.id}}">
+                        </div>
+                    
+                        <div *ngIf="rule.standardValueType == 'LIST'">
+                            <input type="checkbox" (ngModelChange)="checkBoxChange(rowData, rule, $event)" [(ngModel)]="rule.use" name="{{rule.ruleName + rowData.id}}">
+                            <app-list-input-box *ngIf="rule.use" [strs]="rule.standardValueStrObjs" (update)="rule.standardValue=$event"></app-list-input-box>
+                        </div>
+                    </div>
+                </td>
+
+                <td style="text-align: center">
+                        <i class="pi pi-trash" (click)="minus(rowData)"></i>
+                    </td>
+            </tr>
+        </ng-template>
+    </p-treeTable>
+    <div style="text-align: right">
+            <i *ngIf="!saving" class="pi pi-check"  (click)="save()"></i>
+            <i *ngIf="saving" class="pi pi-spin pi-spinner" ></i>
+
+    </div>
+</div>

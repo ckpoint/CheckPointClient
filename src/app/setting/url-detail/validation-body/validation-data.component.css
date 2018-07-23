@@ -1,0 +1,11 @@
+input[type="text"] {width:95%}
+input[type="checkbox"] {width:20px; height:20px;}
+
+i.pi.pi-check {font-size:50px}
+i.pi.pi-spin.pi-spinner{font-size:50px}
+
+i.pi.pi-trash {font-size:20px}
+i.pi.pi-trash {align-items: center}
+
+i.pi.pi-cloud-download {font-size:30px}
+i.pi.pi-caret-down {font-size:30px}

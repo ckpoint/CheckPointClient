@@ -1,0 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
+
+input[type="checkbox"] { cursor: pointer }
+i { cursor: pointer; font-size: 1em}
