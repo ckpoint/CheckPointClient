@@ -1,5 +1,5 @@
 # CheckPointClient
-###### Check-Point-Client depends on [PRIME-NG](https://github.com/primefaces/primeng)
+###### Check-Point-Client depends on [PRIME-NG](https://github.com/primefaces/primeng) [Now CLI](https://github.com/zeit/now-cli)  [NGX Cookie Service](https://github.com/7leads/ngx-cookie-service) 
 
 #### Http request auto validation library (https://github.com/ckpoint/CheckPoint)
 #### CheckPoint Support Client Project
