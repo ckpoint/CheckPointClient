@@ -76,7 +76,7 @@ function sendFile(res, path){
 ## 5. LOGIN AND SCAN
 - When you connect to the client, you will see the login page shown below.
 
-![login](https://github.com/ckpoint/CheckPointClient/blob/master/res/login.png)
+![login](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/login.png)
 
 - Server URL : Your Spring boot Proejct Server URL
 - Password : Your Spring boot Proejct ckpoint.password default value is taeon
@@ -84,28 +84,28 @@ function sendFile(res, path){
 
 ## 6. SCAN YOUR PROEJCT ANNOTATION
 
-![maintab](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_tab.png)
+![maintab](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/main_tab.png)
 
 - With the B button you can scan the annotations into the project and load the message structure as shown below.
 
 
-![annotationscan](https://github.com/ckpoint/CheckPointClient/blob/master/res/annotation_scan.png)
+![annotationscan](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/annotation_scan.png)
 
 ## 7. VALIDATION SETTING
 
 - After selecting the URL in the left tab, you can set the Validation Rule for the request message.
 - These settings are reflected in real time without server reboot.
 
-![validation_setting](https://github.com/ckpoint/CheckPointClient/blob/master/res/validation_setting.png)
+![validation_setting](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/validation_setting.png)
 
 -------------------------------------------------------------------------------------
 ## 8. EXCEL DOCU DOWNLOAD
 
 - If you open the main menu tab, you can see the Excel download button, and if the APACHE POI Library is included in the project, you can get the API structure as a document.
 
-![main_menu_open](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_menu_open.png)
+![main_menu_open](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/main_menu_open.png)
 
 - EXCEL
 
-![excel_download](https://github.com/ckpoint/CheckPointClient/blob/master/res/excel_download.png)
+![excel_download](https://github.com/ckpoint/CheckPointClient/blob/master/res/screenshot/excel_download.png)
 
