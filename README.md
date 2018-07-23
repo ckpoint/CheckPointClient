@@ -20,12 +20,15 @@ https://github.com/ckpoint/CheckPointClient/raw/master/bin.zip
 
 ## 3. SERVER CONFIG
 
+- {CHECK_POINT_CLIENT_PATH} : bin.zip unzip path
+- {SERVER_PORT} : check point client server port
+
 ```javascript
 
 var express = require('express');
 var app = express();
 
-var distPath='{your_Unzip_Folder_Path}/dist/CheckPointWeb'
+var distPath='{CHECK_POINT_CLIENT_PATH}/dist/CheckPointWeb'
 var port = {SERVER_POST};
 
 
@@ -71,5 +74,15 @@ function sendFile(res, path){
 - Open your browser and connect to http: // localhost: {PORT} or http://yourhost:{PORT}
 
 ## 5. LOGIN AND SCAN
+- When you connect to the client, you will see the login page shown below.
 
 ![login](https://github.com/ckpoint/CheckPointClient/blob/master/res/login.PNG)
+
+- Server URL : Your Spring boot Proejct Server URL
+- Password : Your Spring boot Proejct ckpoint.password default value is taeon
+
+
+## 6. SCAN YOUR PROEJCT ANNOTATION
+
+![main_tab](https://github.com/ckpoint/CheckPointClient/blob/master/res/main_tab.PNG)
+-------------------------------------------------------------------------------------
