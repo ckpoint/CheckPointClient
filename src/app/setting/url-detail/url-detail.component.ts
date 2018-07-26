@@ -22,7 +22,6 @@ export class UrlDetailComponent implements OnInit {
   refreshUrl(url: ReqUrl) {
     this.reqUrl = url ; 
 
-    console.log ( this.validationDataComponents)
     this.validationDataComponents.forEach( c =>{
       c.refreshUrl(url);
     })

@@ -44,7 +44,6 @@ export class UrlListComponent implements OnInit {
       })
   }
   favoriteClick(reqUrl:ReqUrl){
-    console.log(reqUrl);
     this.saveFavorites();
   }
 
