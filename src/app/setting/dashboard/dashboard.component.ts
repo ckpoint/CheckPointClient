@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   menuView:boolean=false;
   scanMenuView:boolean=false;
   tabSize:number=1;
+  ing:boolean=false;
   
 
   @ViewChild(UrlDetailComponent) UrlDetailComponent:UrlDetailComponent;
@@ -72,9 +73,11 @@ export class DashboardComponent implements OnInit {
 
   clean(){
     if (confirm("are you delete all data?")) {
+        this.ing = true;
         this.settingService.cleanAll().subscribe(res =>{
             this.cookieStore.setData('ValidationFavorites', '');
             this.refresh();
+            this.ing = false;
         })
     }
   }

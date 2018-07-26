@@ -69,7 +69,6 @@ export class ValidationDataComponent  {
     if (add) {
       this.hiddenTap.push(tab)
     }
-    console.log(this.hiddenTap)
 
     this.cookieStore.setData(this.getUniqueKey(), this.hiddenTap);
 
@@ -78,7 +77,10 @@ export class ValidationDataComponent  {
   addTree(body: ValidationData):SettingUrlTree{
     let t = new SettingUrlTree(body);
     if (body.parentId) {
-      this.map.find(t => t.data.id == body.parentId).addChild(t);
+      let parent = this.map.find(t => t.data.id == body.parentId);
+        if (parent) {
+            parent.addChild(t)
+      }
     }
     else {
       this.trees.push(t);
@@ -144,8 +146,6 @@ export class ValidationDataComponent  {
     this.reqUrl = url;
     this.trees = [];
     this.settingService.getValidationDataList(this.paramType, this.reqUrl).subscribe(res => {
-      console.log ( "refresh Url : ")
-      console.log(res)
       this.validationDataList = res.sort( ( a,b) => a.id < b.id? 1 :-1).sort( ( a,b) => a.deepLevel < b.deepLevel ? -1 :1);
 
       if(this.validationDataList && this.validationDataList.length > 0 ){
@@ -230,7 +230,6 @@ export class ValidationDataComponent  {
   checkBoxChange(data: ValidationData, rule: ValidationRule, checked: boolean) {
     this.parentDependencyCheck(data, rule, checked);
     this.overlayBanRuleCheck(data, rule, checked);
-    console.log(rule)
   }
   delCheck(data: ValidationData) {
     data.del = true;

@@ -31,9 +31,7 @@ export class CookieStoreService {
   }
 
   private update(){
-    console.log(this.data)
     let json = JSON.stringify(this.data);
-    console.log(json);
     this.cookie.set(this.cookieName, json , this.getExpiredDate());
   }
   public setData(key:string, value:any){

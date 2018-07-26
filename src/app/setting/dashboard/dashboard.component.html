@@ -1,3 +1,4 @@
+
 <div class="ui-g">
 <div class={{getUiClassName(tabSize)}}>
 
@@ -23,4 +24,4 @@
 
 <app-main-menu [visible]="menuView" (onHide)="menuView=false" (logout)="logout()" (refresh)="refresh()"></app-main-menu>
 <app-scan-menu [visible]="scanMenuView" (onHide)="scanMenuView=false" (refresh)="refresh()"></app-scan-menu>
-
+<app-ing-view [visible]="ing"></app-ing-view>

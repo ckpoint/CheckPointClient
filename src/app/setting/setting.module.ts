@@ -19,6 +19,7 @@ import { DownloadMenuComponent } from './menu/download-menu/download-menu.compon
 import { ImportMenuComponent } from './menu/import-menu/import-menu.component';
 import { CookieStoreService } from '../util/cookie-store';
 import { ScanMenuComponent } from './menu/scan-menu/scan-menu.component';
+import { IngViewComponent } from './menu/ing-view/ing-view.component';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { ScanMenuComponent } from './menu/scan-menu/scan-menu.component';
     AccordionModule, ButtonModule, TreeTableModule ,CheckboxModule,DropdownModule,DialogModule,FileUploadModule
   ],
   declarations: [UrlListComponent, DashboardComponent, UrlDetailComponent, ValidationDataComponent
-    ,LoginComponent, UrlItemComponent, ListInputBoxComponent, MainMenuComponent, DownloadMenuComponent, ImportMenuComponent, ScanMenuComponent ],
+    ,LoginComponent, UrlItemComponent, ListInputBoxComponent, MainMenuComponent, DownloadMenuComponent, ImportMenuComponent, ScanMenuComponent, IngViewComponent ],
   providers:[
     ApplicationHttpClient,CookieService,CookieStoreService
   ]

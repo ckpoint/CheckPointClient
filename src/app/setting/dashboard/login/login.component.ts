@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
             this.loginToken();
         }
 
-        console.log(this.serverInfo)
         this.cookieStore.setServerInfo(this.serverInfo);
     }
 
