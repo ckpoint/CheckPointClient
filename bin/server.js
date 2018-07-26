@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 
-var distPath='D:/CheckPoint/CheckPointClient/dist/CheckPointWeb'
+var distPath='D:/CheckPoint/CheckPointClient/dist'
 var port = 7000;
 
 
