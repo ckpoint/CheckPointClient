@@ -4,6 +4,8 @@
 #### Http request auto validation library (https://github.com/ckpoint/CheckPoint)
 #### CheckPoint Support Client Project
 
+## [Open Client](http://106.10.51.130/login)
+
 # Installation
 
 ## Table of Contents
