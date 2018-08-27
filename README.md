@@ -6,7 +6,7 @@
 
 # Easy Start
 
-###  Check-Point-Client (http://106.10.51.130/login)
+###  Check-Point-Client (http://221.141.118.220/login)
 
 # Installation
 
